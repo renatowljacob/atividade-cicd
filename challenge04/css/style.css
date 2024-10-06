@@ -1,0 +1,155 @@
+@import url("./fonts.css");
+
+:root {
+
+	/* Colors */
+
+	--clr-accent-500: #38CFD9;
+	--clr-accent-600: #87629A;
+
+	--clr-primary: #23424A;
+	--clr-secondary: #136C72;
+
+	--clr-neutral-500: #FFFFFF;
+	--clr-neutral-400: #3A3A3A;
+
+	/* Fonts */
+
+	--ff-primary: 'Roboto';
+	--ff-body: var(--fs-primary);
+	--ff-heading: var(--fs-primary);
+
+	/* Font sizes */
+
+	--fs-500: 1.325rem;
+	--fs-700: 2.25rem;
+	--fs-900: 3rem;
+
+	/* Font weights */
+
+	--fw-regular: 400;
+	--fw-bold: 700;
+	--fw-black: 900;
+}
+
+*::before,
+*,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+body {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-500);
+	font-weight: var(--fw-regular);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap-mode: balance;
+}
+
+p {
+	text-wrap-mode: pretty;
+}
+
+.hero {
+	background-color: var(--clr-primary);
+}
+
+.container {
+	margin: 0 auto;
+
+	max-width: 1100px;
+	width: 80%;
+}
+
+/* The funny */
+.container+.container {
+	background-color: var(--clr-secondary);
+
+	max-width: 100%;
+	width: 100%;
+
+	>.container {
+		display: flex;
+		gap: 1em;
+
+		padding: 4em 0;
+		text-align: center;
+	}
+}
+
+.hero--text {
+	color: var(--clr-neutral-500);
+
+	padding: 5em 0;
+	width: 60%;
+
+	>.hero--heading {
+		font-size: var(--fs-900);
+		font-weight: var(--fw-black);
+
+		margin-bottom: .5em;
+	}
+
+	>.hero--body {
+		margin-bottom: 3em;
+	}
+}
+
+.btn {
+	display: inline-block;
+
+	border-radius: 2em;
+	padding: .75em 2em;
+
+	background-color: var(--clr-accent-500);
+	color: #000000;
+
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: var(--fw-bold);
+}
+
+.flex {
+	display: flex;
+	gap: 1em;
+
+	padding: 4em 0;
+
+	text-align: center;
+}
+
+.flex--heading {
+	margin-bottom: .5em;
+
+	font-size: var(--fs-700);
+	font-weight: var(--fw-black);
+}
+
+.clr--accent {
+	color: var(--clr-accent-600);
+}
+
+.clr--neutral {
+	color: var(--clr-neutral-500);
+}
