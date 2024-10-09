@@ -108,6 +108,8 @@ h6 {
 /* Navbar */
 
 .nav {
+	display: flex;
+
 	padding: 1em 0;
 	font-size: 1rem;
 
@@ -144,6 +146,14 @@ h6 {
 			color: color-mix(in srgb, var(--clr-neutral-700), var(--clr-accent-700));
 		}
 	}
+
+	.nav--list+.nav--list {
+		margin-left: auto;
+	}
+}
+
+.logo {
+	margin-right: 2em;
 }
 
 /* MAIN */
