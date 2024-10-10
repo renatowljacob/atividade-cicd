@@ -1,0 +1,163 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+:root {
+	--ff-heading: "Playfair Display";
+	--ff-body: "Roboto";
+
+	--fs-400: 1.125rem;
+	--fs-500: 1.3125rem;
+	--fs-600: 2.25rem;
+	--fs-700: 3.75rem;
+
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-black: 900;
+
+	--clr-primary: #F3EED9;
+	--clr-secondary: #824936;
+	--clr-tertiary: #222C2A;
+
+	@media (prefers-color-scheme: dark) {
+		.hero-content {
+			background-color: var(--clr-tertiary);
+
+			>.heading,
+			>.heading::before {
+				color: var(--clr-primary);
+			}
+		}
+
+		.content-block {
+			background-color: var(--clr-secondary)
+		}
+
+		.main-block {
+			>.heading {
+				color: var(--clr-primary);
+			}
+		}
+
+		.two-col-text {
+			color: var(--clr-primary);
+		}
+	}
+}
+
+body {
+	font-family: var(--ff-body);
+	font-size: var(--fs-500);
+	font-weight: var(--fw-regular);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap-style: balance;
+}
+
+p {
+	text-wrap-style: pretty;
+}
+
+.hero-content {
+	display: flex;
+	align-content: center;
+
+	background-color: var(--clr-primary);
+
+	min-height: 660px;
+
+	>.heading::before {
+		content: "Lorem ipsum sit";
+
+		color: var(--clr-tertiary);
+
+		font-family: ff-body;
+		font-size: var(--fs-400);
+		font-weight: var(--fw-light);
+
+		text-transform: uppercase;
+		letter-spacing: .5em;
+	}
+
+	>.heading {
+		color: var(--clr-secondary);
+
+		font-family: var(--ff-heading);
+		font-size: var(--fs-700);
+		font-weight: var(--fw-black);
+		text-align: center;
+
+		margin: auto;
+	}
+}
+
+.main-content {
+	.heading {
+		font-family: var(--ff-heading);
+		font-size: var(--fs-600);
+		font-weight: var(--fw-black);
+
+		margin-bottom: 1em;
+	}
+
+	.paragraph {
+		margin-bottom: 1.5em;
+	}
+
+	>.content-block {
+		padding: 4em;
+	}
+}
+
+.content-block {
+	&.-darker {
+		background-color: var(--clr-tertiary);
+	}
+
+	&.-warmer {
+		background-color: var(--clr-secondary);
+	}
+}
+
+.main-block {
+	>.heading {
+		color: var(--clr-secondary);
+
+		text-align: center;
+	}
+}
+
+.img {
+	font-style: italic;
+
+	width: 100%;
+	object-fit: contain;
+}
+
+.two-col-text {
+	display: flex;
+	gap: 3em;
+	justify-content: space-between;
+
+	color: var(--clr-tertiary);
+}
+
+.inspiring-block {
+	display: flex;
+	gap: 3em;
+	justify-content: space-between;
+
+	>.text-block {
+		color: var(--clr-primary);
+	}
+}
+
+.container {
+	margin: auto;
+	width: min(100%, 1128px);
+}
