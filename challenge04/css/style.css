@@ -1,4 +1,5 @@
-@import url("./fonts.css");
+@import url("fonts.css");
+@import url("../../utils/reset.css");
 
 :root {
 
@@ -40,116 +41,76 @@
 
 /* Reset */
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	margin: 0;
-}
-
 body {
 	font-family: var(--ff-primary);
 	font-size: var(--fs-500);
 	font-weight: var(--fw-regular);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap-mode: balance;
-}
-
-p {
-	text-wrap-mode: pretty;
-}
-
-.hero {
+.hero-block {
 	background-color: var(--clr-primary);
-}
 
-.container {
-	margin: 0 auto;
-
-	max-width: 1100px;
-	width: 80%;
-}
-
-/* The funny */
-.container+.container {
-	background-color: var(--clr-secondary);
-
-	max-width: 100%;
-	width: 100%;
-
-	>.container {
-		display: flex;
-		gap: 1em;
-
-		padding: 4em 0;
-		text-align: center;
+	.paragraph {
+		margin-bottom: 3em;
 	}
 }
 
-.hero--text {
-	color: var(--clr-neutral-500);
+.wrapper-block {
+	margin-inline: auto;
+	width: min(1100px, 80%);
+}
 
-	padding: 5em 0;
+.content-block {
+	&.-neutral {
+		.heading {
+			color: var(--clr-accent-600);
+		}
+	}
+
+	&.-colored {
+		background-color: var(--clr-secondary);
+
+		color: var(--clr-neutral-500);
+	}
+}
+
+.text-block {
+	padding-block: 5em;
 	width: 60%;
 
-	>.hero--heading {
+	color: var(--clr-neutral-500);
+
+	>.heading {
 		font-size: var(--fs-900);
 		font-weight: var(--fw-black);
-
-		margin-bottom: .5em;
-	}
-
-	>.hero--body {
-		margin-bottom: 3em;
 	}
 }
 
 .btn {
 	display: inline-block;
-
+	background-color: var(--clr-accent-500);
 	border-radius: 2em;
 	padding: .75em 2em;
 
-	background-color: var(--clr-accent-500);
 	color: #000000;
-
+	font-weight: var(--fw-bold);
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: var(--fw-bold);
 }
 
-.flex {
+.info-list {
 	display: flex;
 	gap: 1em;
 
-	padding: 4em 0;
+	padding-block: 4em;
 
 	text-align: center;
 }
 
-.flex--heading {
+.heading {
 	margin-bottom: .5em;
 
 	font-size: var(--fs-700);
 	font-weight: var(--fw-black);
-}
-
-.clr--accent {
-	color: var(--clr-accent-600);
-}
-
-.clr--neutral {
-	color: var(--clr-neutral-500);
 }

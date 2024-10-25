@@ -1,5 +1,5 @@
 @import url("fonts.css");
-@import url("reset.css");
+@import url("../../utils/reset.css");
 
 :root {
 	--ff-heading: "Playfair Display";
@@ -50,19 +50,6 @@ body {
 	font-weight: var(--fw-regular);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-wrap-style: balance;
-}
-
-p {
-	text-wrap-style: pretty;
-}
-
 .hero-content {
 	display: flex;
 	align-content: center;
@@ -92,7 +79,7 @@ p {
 		font-weight: var(--fw-black);
 		text-align: center;
 
-		margin: auto;
+		margin-inline: auto;
 	}
 }
 
@@ -158,6 +145,6 @@ p {
 }
 
 .container {
-	margin: auto;
+	margin-inline: auto;
 	width: min(100%, 1128px);
 }
