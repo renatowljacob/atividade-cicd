@@ -34,6 +34,7 @@ body {
 }
 
 .paragraph {
+  color: var(--clr-tertiary);
   line-height: 1.5;
 }
 
@@ -51,7 +52,6 @@ body {
   }
 
   .paragraph {
-    color: var(--clr-tertiary);
     letter-spacing: 10px;
     text-transform: uppercase;
 
@@ -155,5 +155,31 @@ body {
     > .img {
       width: auto;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-secondary: #f3eed9;
+  }
+
+  .paragraph {
+    color: var(--clr-primary);
+  }
+
+  .hero-content,
+  .content-block,
+  .content-block.-darker,
+  .content-block.-warmer {
+    background-color: var(--clr-tertiary);
+  }
+
+  .hero-content,
+  .content-block {
+    border-bottom: 2px dashed var(--clr-primary);
+  }
+
+  .content-block.-warmer {
+    border-bottom: none;
   }
 }
