@@ -1,5 +1,5 @@
 @import url("fonts.css");
-@import url("../../utils/reset.css");
+@import url("../utils/reset.css");
 
 :root {
 	--clr-primary: #23424A;
@@ -42,13 +42,12 @@ body {
 
 .nav-bar {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 
 	font-size: 1rem;
 
 	.logo {
-		margin-right: 2rem;
+		margin-right: 2em;
 		padding-block: 1em;
 	}
 
@@ -59,6 +58,11 @@ body {
 		padding-block: 1em;
 
 		list-style: none;
+
+		/* &+& is kinda clunky, since the element will be placed on the far right when wrap kicks in */
+		&:first-of-type {
+			margin-right: auto;
+		}
 	}
 
 	>.nav-list>.nav-item {

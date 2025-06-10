@@ -1,5 +1,5 @@
 @import url("fonts.css");
-@import url("../../utils/reset.css");
+@import url("../utils/reset.css");
 
 :root {
 	--clr-primary: #23424A;
@@ -41,15 +41,7 @@ body {
 }
 
 .nav-bar {
-	display: flex;
-	flex-wrap: wrap;
-
 	font-size: 1rem;
-
-	.logo {
-		margin-right: 2em;
-		padding-block: 1em;
-	}
 
 	>.nav-list {
 		display: flex;
@@ -58,11 +50,6 @@ body {
 		padding-block: 1em;
 
 		list-style: none;
-
-		/* &+& is kinda clunky, since the element will be placed on the far right when wrap kicks in */
-		&:first-of-type {
-			margin-right: auto;
-		}
 	}
 
 	>.nav-list>.nav-item {
@@ -70,6 +57,8 @@ body {
 	}
 
 	>.nav-list>.nav-item>.link {
+
+		/* Apply a hover effect on every link that is not a "button" */
 		&:not(:where(.btn)) {
 			transition: color 500ms ease;
 
