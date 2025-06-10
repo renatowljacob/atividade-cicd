@@ -41,7 +41,16 @@ body {
 }
 
 .nav-bar {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
 	font-size: 1rem;
+
+	.logo {
+		margin-right: 2rem;
+		padding-block: 1em;
+	}
 
 	>.nav-list {
 		display: flex;
@@ -57,8 +66,6 @@ body {
 	}
 
 	>.nav-list>.nav-item>.link {
-
-		/* Apply a hover effect on every link that is not a "button" */
 		&:not(:where(.btn)) {
 			transition: color 500ms ease;
 
