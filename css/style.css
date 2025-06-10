@@ -143,6 +143,10 @@ body {
 		font-weight: var(--fw-black);
 	}
 
+	.paragraph + .heading {
+		margin-top: 1.5rem;
+	}
+
 	>.paragraph {
 		margin-bottom: 1em;
 	}
